@@ -1,1 +1,1 @@
-# tpi
+# Practicas realizadas en la materia Tecnicas de Programacion
