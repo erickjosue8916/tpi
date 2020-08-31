@@ -46,11 +46,11 @@ function startGame() {
         showDice('#dice1', player1)
         showDice('#dice2', player2)
         if (player1 == player2) {
-            title.innerHTML = 'Empate!!! '
+            title.innerHTML = 'Empate!!! 🙄'
         } else if (player1 > player2) {
-            title.innerHTML = 'Jugador 1 a ganado!!!!'
+            title.innerHTML = 'Jugador 1 a ganado!!!! 🥳'
         } else {
-            title.innerHTML = 'Jugador 2 a ganado!!!!'
+            title.innerHTML = 'Jugador 2 a ganado!!!! 😎'
         }
     })
 }
