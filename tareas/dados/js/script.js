@@ -1,10 +1,10 @@
 const selectors = [
-    [5], 
-    [1,9],
-    [3,5,7],
-    [1,3,7,9],
-    [1,3,5,7,9],
-    [1,3,4,6,7,9],
+    [4], 
+    [0,8],
+    [2,4,6],
+    [0,2,6,8],
+    [0,2,4,6,8],
+    [0,2,3,5,6,8],
 ]
 
 function getNumber(min, max) {
@@ -19,14 +19,16 @@ function getResult() {
 
 function reset() {
     const circles = document.querySelectorAll(`.circle`)
-    console.log(circles[0])
-    /* circles.map(c => {
-        c.classList.remove('active')
-    }) */
+    for(let i = 0; i < circles.length; i++) {
+        circles[i].classList.remove('active')
+    }
 }
 
 function showDice(dice, number) {
     const circles = document.querySelectorAll(`${dice} .circle`)
+    
+    console.log(selectors[number - 1])
+    // circles[0].classList.add('active')
     selectors[number - 1].map(pos => {
         circles[pos].classList.add('active')
     })
@@ -40,10 +42,11 @@ function startGame() {
     button.addEventListener('click', () => {
         reset()
         const { player1, player2 } = getResult()
+        console.log(player1, player2)
         showDice('#dice1', player1)
         showDice('#dice2', player2)
         if (player1 == player2) {
-            title.innerHTML = 'Empate!!!'
+            title.innerHTML = 'Empate!!! '
         } else if (player1 > player2) {
             title.innerHTML = 'Jugador 1 a ganado!!!!'
         } else {
