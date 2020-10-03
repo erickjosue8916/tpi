@@ -13,8 +13,12 @@ class Task {
 
     public function list () {
         $sql = "SELECT * FROM " . self::TABLE_NAME;
-        if ($result = $this->db->query($sql)) {
-            return $result;
+        if ($result = $this->db->query($sql, MYSQLI_USE_RESULT)) {
+            $data = array();
+            while ($obj = $result->fetch_object()) {
+                array_push($data, $obj);
+            }
+            return $data;
         }
         
     }
