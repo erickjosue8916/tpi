@@ -1,10 +1,7 @@
 <?php 
 require_once "render/BaseLayout.php";
 require_once "config/configControllers.php";
-require_once "models/MySqlConnection.php";
 
-$connection = new MySqlConnection(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-$connection->connect();
 BaseLayout::renderHead();
 
 /**************** CONTROLADOR FRONTAL *********************/
@@ -39,7 +36,7 @@ $controller = $controller . "Controller";
 if(is_file($fullController))
 {
     require_once ($fullController);
-    $printController = new $controller();
+    $printController = new $controller($database);
 }
 else
 {

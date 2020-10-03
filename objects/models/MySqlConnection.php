@@ -1,7 +1,6 @@
 <?php
 
 require_once "models/Connection.php";
-
 class MySqlConnection extends Connection {
     public function __construct($host, $user, $password, $database)
     {
@@ -13,8 +12,6 @@ class MySqlConnection extends Connection {
         
         if ($this->connection->connect_errno) {
             echo "Fallo al conectar a MySQL: " . $this->connection->connect_error;
-        } else {
-            echo "Connection success";
         }
     }
 
