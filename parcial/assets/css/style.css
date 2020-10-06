@@ -1,0 +1,127 @@
+:root {
+    --primary: #2B6770;
+    --secondary: #43A1B0;
+    --txt-dark-color: #101010;
+    --txt-ligth-color: rgb(233, 231, 231);
+    --primary-font: 'Roboto', sans-serif;
+    --btn-hover-color: #6a6a6a;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-font);
+    font-size: 1em;
+    
+}
+
+/* START TYPHOGRAPY */
+h1 {font-size: 2em;}
+h2 {font-size: 1.8em;}
+h3 {font-size: 1.6em;}
+h4 {font-size: 1.4em;}
+h5 {font-size: 1.2em;}
+h6 {font-size: 1em;}
+/* END TYPHOGRAPY */
+
+.row, .col, .content {
+    display: grid;
+}
+
+.content {
+    max-width: 100%;
+}
+body {
+    display: grid;
+    box-sizing: border-box;
+    min-height: 100vh;
+    grid-template-rows: 70px auto 50px;
+}
+
+.container {
+    display: grid;
+    width: 90%;
+    margin: auto;
+    align-content: top;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    background: var(--primary);
+    overflow: hidden;
+    max-height: 70px;
+}
+
+.navbar .navbar__brand {
+    display: grid;
+    color: var(--txt-ligth-color);
+}
+
+.navbar .navbar__menu {
+    display: grid;
+    text-transform: uppercase;
+    color: var(--txt-ligth-color);
+}
+
+.navbar .navbar__menu a.active {
+    background: var(--secondary);
+    color: var(--txt-dark-color);
+}
+
+/* LAYOUT */
+.is_jcontent_c {
+    justify-content: center;
+}
+
+.is_jitems_r {
+    justify-content: right;
+}
+
+.is_jitems_c {
+    justify-items: center;
+}
+
+.is_acontent_c {
+    align-content: center;
+}
+
+.pa_1 {
+    padding: 2;
+}
+
+main {
+    display: grid;
+    align-items: flex-start;
+}
+
+footer {
+    background: var(--primary);
+    color: var(--txt-ligth-color);
+    display: grid;
+    font-size: 0.8em;
+}
+
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: var(--color);
+}
+
+a.btn {
+    padding: 15px 25px;
+    margin: 0 5px;
+    transition: all .5s ease;
+}
+
+a.btn {
+    padding: 15px 25px;
+    margin: 0 5px;
+    transition: all .5s ease;
+}
+
+a.btn:hover {
+    background: var(--secondary);
+    color: var(--txt-dark-color);
+}
