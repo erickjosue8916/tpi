@@ -23,10 +23,10 @@
   
       <div class="navbar__menu is_jitems_r is_acontent_c">
         <div>
-          <a href="" class="btn <?=($active == "Home") ? "active": ""; ?>">home</a>
-          <a href="" class="btn <?=($active == "About") ? "active": ""; ?>">about</a>
-          <a href="" class="btn <?=($active == "Contact") ? "active": ""; ?>">contact</a>
-          <a href="" class="btn <?=($active == "Component") ? "active": ""; ?>">test</a>
+          <a href="<?=BASE_DIR?>Home/showHome" class="btn <?=($active == "Home") ? "active": ""; ?>">home</a>
+          <a href="<?=BASE_DIR?>About/showAbout" class="btn <?=($active == "About") ? "active": ""; ?>">about</a>
+          <a href="<?=BASE_DIR?>Contact/showContact" class="btn <?=($active == "Contact") ? "active": ""; ?>">contact</a>
+          <a href="<?=BASE_DIR?>Component/form" class="btn <?=($active == "Component") ? "active": ""; ?>">Component</a>
         </div>
       </div>
     </header>

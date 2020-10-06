@@ -24,12 +24,16 @@ h5 {font-size: 1.2em;}
 h6 {font-size: 1em;}
 /* END TYPHOGRAPY */
 
-.row, .col, .content {
-    display: grid;
-}
 
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
 .content {
-    max-width: 100%;
+    display: grid;
+    width: auto;
 }
 body {
     display: grid;
@@ -124,4 +128,20 @@ a.btn {
 a.btn:hover {
     background: var(--secondary);
     color: var(--txt-dark-color);
+}
+
+/* INPUTS */
+
+.form {
+    display: grid;
+    grid-auto-rows: minmax(50px, 75px);
+    align-items: center;
+    gap: 5px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    border-width: 1px;
+    margin: 5px 0;
 }

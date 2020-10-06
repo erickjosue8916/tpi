@@ -15,4 +15,9 @@ class ComponentController {
         $config = ["brand" => "testing", "logo" => "logo.png"];
         require_once "components/nabvar.php";
     }
+    
+    public function form () {
+        $config = ["brand" => "testing", "logo" => "logo.png"];
+        require_once "components/form.php";
+    }
 }
