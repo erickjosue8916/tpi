@@ -1,6 +1,9 @@
 :root {
     --primary: #2B6770;
     --secondary: #43A1B0;
+    --warning: #BA6D20;
+    --danger: #BD3429;
+    --success: #1EBD48;
     --txt-dark-color: #101010;
     --txt-ligth-color: rgb(233, 231, 231);
     --primary-font: 'Roboto', sans-serif;
@@ -24,16 +27,35 @@ h5 {font-size: 1.2em;}
 h6 {font-size: 1em;}
 /* END TYPHOGRAPY */
 
+/* START COLORS */
+.bg-danger {background: var(--danger);}
+.bg-success {background: var(--success);}
+.bg-warning {background: var(--warning);}
+.bg-primary {background: var(--primary);}
+.bg-secondary {background: var(--secondary);}
 
+.txt-danger {color: var(--danger);}
+.txt-success {color: var(--success);}
+.txt-warning {color: var(--warning);}
+.txt-primary {color: var(--primary);}
+.txt-secondary {color: var(--secondary);}
+/* END COLORS */
 
 .row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: column;
     grid-gap: 5px;
 }
+
+.col {
+  display: grid;
+  align-items: center;
+  width: auto;
+}
 .content {
-    display: grid;
-    width: auto;
+  display: grid;
+  align-items: center;
+  width: auto;
 }
 body {
     display: grid;
@@ -119,24 +141,39 @@ a.btn {
     transition: all .5s ease;
 }
 
-a.btn {
+a.btn, button.btn {
     padding: 15px 25px;
     margin: 0 5px;
     transition: all .5s ease;
 }
 
+button.btn {
+  color: var(--txt-ligth-color);
+  background: var(--primary);
+  border-width: 0px;
+  border-radius: 5px;
+}
+
 a.btn:hover {
+    
     background: var(--secondary);
     color: var(--txt-dark-color);
 }
 
+
+
 /* INPUTS */
 
 .form {
+  width: 300px;
     display: grid;
     grid-auto-rows: minmax(50px, 75px);
     align-items: center;
     gap: 5px;
+}
+
+.form .form__action {
+  grid-column: 1 / 3;
 }
 
 input[type="text"] {
@@ -145,3 +182,28 @@ input[type="text"] {
     border-width: 1px;
     margin: 5px 0;
 }
+
+input[type="text"]:focus {
+  border: 2px solid var(--primary);
+}
+
+
+/* START TABLE */ 
+
+th {
+  text-transform: uppercase;
+}
+tr {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+tr:first-child{
+  border-top: 2px solid #000;
+}
+
+th, td {
+  display: grid;
+  padding: 10px 10px;
+}
+/* EMD TABLE */ 

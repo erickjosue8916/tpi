@@ -17,7 +17,31 @@ class ComponentController {
     }
     
     public function form () {
-        $config = ["brand" => "testing", "logo" => "logo.png"];
-        require_once "components/form.php";
+        if (isset($_COOKIE['users'])) {
+            $config = ["headers" => ["name", "lastname", "email"], "rows" => json_decode($_COOKIE['users'], true)];
+            require_once "components/table.php";
+            var_dump($config);
+        }
+        if (count($_POST)) {
+            var_dump(json_decode($_COOKIE['users'], true));
+            $users = (isset($_COOKIE['users'])) ? json_decode($_COOKIE['users'], true) : [];
+            array_push($users, $_POST);
+            setcookie('users', json_encode($users));
+        }
+        require_once "views/form.php";
+    }
+    
+    public function table () {
+        require "assets/tasks.php";
+        $config = ["headers" => ["id", "name"], "rows" => [
+            ["id" => 1, "name" => "erick"],
+            ["id" => 1, "name" => "erick"],
+            ["id" => 1, "name" => "erick"],
+            ["id" => 1, "name" => "erick"],
+            ["id" => 1, "name" => "erick"],
+            ["id" => 1, "name" => "erick"],
+            ["id" => 1, "name" => "erick"],
+        ]];
+        require_once "components/table.php";
     }
 }
