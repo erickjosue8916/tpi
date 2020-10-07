@@ -234,7 +234,8 @@ div.animals__banner {
 
 .animals__gallery {
   display: grid;
-  grid-template-columns: repeat(1fr, 4);
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: left;
 }
 
 .animasl__card {
@@ -245,6 +246,9 @@ div.animals__banner {
 }
 
 .animals__card__image {
-
+  width: 75px;
+  height: 75px;
+  display: block;
+  margin: auto;
 }
 /* END BANNER */
