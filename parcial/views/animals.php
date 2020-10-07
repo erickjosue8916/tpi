@@ -20,15 +20,14 @@
                 <div class="animal__card" id="<?=$value->getName()?>">
                     <div class="animal__card__image">
                         
+                        
                     </div>
                     <div class="animal__card__body">
                         <p><?=$value->getName();?></p>
                         <p><?=$value->getDescription();?></p>
                     </div>
                     <div class="animal__card__actions" >
-                        <audio controls>
-                            <source src="<?=BASE_DIR?>assets/audio/<?=$value->getName()?>.mp3" type='audio/mp3'>
-                        </audio>
+                        
                     </div>
                 </div>
             <?php } ?>
