@@ -31,6 +31,16 @@ class ComponentController {
         require_once "views/form.php";
     }
     
+    public function card () {
+        if (count($_POST)) {
+            var_dump(json_decode($_COOKIE['users'], true));
+            $users = (isset($_COOKIE['users'])) ? json_decode($_COOKIE['users'], true) : [];
+            array_push($users, $_POST);
+            setcookie('users', json_encode($users));
+        }
+        require_once "views/form.php";
+    }
+    
     public function table () {
         require "assets/tasks.php";
         $config = ["headers" => ["id", "name"], "rows" => [

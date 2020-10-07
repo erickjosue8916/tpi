@@ -1,8 +1,9 @@
 <?php
-  $active = "Home";
+  $active = "Mamiferos";
   if (isset($_REQUEST['controller'])){
     $active = $_REQUEST['controller'];
   }
+  echo "<script> const baseDir = '" . BASE_DIR . "'; </script>"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,11 +24,10 @@
   
       <div class="navbar__menu is_jitems_r is_acontent_c">
         <div>
-          <a href="<?=BASE_DIR?>Home/showHome" class="btn <?=($active == "Home") ? "active": ""; ?>">home</a>
-          <a href="<?=BASE_DIR?>About/showAbout" class="btn <?=($active == "About") ? "active": ""; ?>">about</a>
-          <a href="<?=BASE_DIR?>Contact/showContact" class="btn <?=($active == "Contact") ? "active": ""; ?>">contact</a>
-          <a href="<?=BASE_DIR?>Component/form" class="btn <?=($active == "Component") ? "active": ""; ?>">Component</a>
+          <a href="<?=BASE_DIR?>Mamiferos/showAnimals" class="btn <?=($active == "Mamiferos") ? "active": ""; ?>">Mamiferos</a>
+          <a href="<?=BASE_DIR?>Aves/showAnimals" class="btn <?=($active == "Aves") ? "active": ""; ?>">Aves</a>
+          <a href="<?=BASE_DIR?>Reptiles/showAnimals" class="btn <?=($active == "Reptiles") ? "active": ""; ?>">Reptiles</a>
+          <a href="<?=BASE_DIR?>Peces/showAnimals" class="btn <?=($active == "Peces") ? "active": ""; ?>">Peces</a>
         </div>
       </div>
     </header>
-    <div class="container">
